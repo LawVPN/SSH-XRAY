@@ -97,7 +97,7 @@ fi
 fi
 
 echo ""
-wget -q https://raw.githubusercontent.com/LawVPN/main/data/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
+wget -q https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
 
@@ -110,4 +110,87 @@ echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
 echo "IP=$pp" > /var/lib/yudhynetwork-pro/ipvps.conf
 
+############# LawNET #############
+#THEME RED
+cat <<EOF>> /etc/yudhynetwork/theme/red
+BG : \E[40;1;41m
+TEXT : \033[0;31m
+EOF
+#THEME BLUE
+cat <<EOF>> /etc/yudhynetwork/theme/blue
+BG : \E[40;1;44m
+TEXT : \033[0;34m
+EOF
+#THEME GREEN
+cat <<EOF>> /etc/yudhynetwork/theme/green
+BG : \E[40;1;42m
+TEXT : \033[0;32m
+EOF
+#THEME YELLOW
+cat <<EOF>> /etc/yudhynetwork/theme/yellow
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME MAGENTA
+cat <<EOF>> /etc/yudhynetwork/theme/magenta
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME CYAN
+cat <<EOF>> /etc/yudhynetwork/theme/cyan
+BG : \E[40;1;46m
+TEXT : \033[0;36m
+EOF
+#THEME CONFIG
+cat <<EOF>> /etc/yudhynetwork/theme/color.conf
+blue
+EOF
+############# LawNET #############
 
+#install ssh ovpn
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+
+#Install Xray
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED XRAY          |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget http://install.yudhy.net/FILE/XRAY/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+
+#Install SSH Websocket
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget http://install.yudhy.net/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+
+#Install OHP Websocket
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget http://install.yudhy.net/FILE/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+
+#Install AutoBackup
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED AUTO BACKUP           |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget http://install.yudhy.net/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+
+#Download Extra Menu
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+wget http://install.yudhy.net/FILE/MENU/update.sh && chmod +x update.sh && ./update.sh
+clear
