@@ -11,11 +11,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=ID
 state=Jawa-Tengah 
-locality=Tegal
-organization=YudhyNetwork
-organizationalunit=YudhyNetwork
-commonname=YudhyNetwork
-email=admin@yudhy.net
+locality=Pati
+organization=LawNET
+organizationalunit=LawNET
+commonname=LawNET
+email=plukman123@gmail.com
 
 # simple password minimal
 curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
