@@ -3,7 +3,7 @@ Support only Debian 10, silakan yang pakai ubuntu atau distribusi dan versi yang
 
 ## Installer
 ```
-wget https://raw.githubusercontent.com/LawVPN/main/setup.sh && chmod +x setup.sh && ./setup.sh
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 Jika sudah menggunakan Debian 10 tetapi masih mendapati error saat install script, silakan copy paste kode di bawah dan install scriptnya lagi.
