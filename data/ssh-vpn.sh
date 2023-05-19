@@ -127,9 +127,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "http://install.yudhy.net/FILE/SSH/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/nginx.conf"
 rm /etc/nginx/conf.d/vps.conf
-wget -O /etc/nginx/conf.d/vps.conf "http://install.yudhy.net/FILE/SSH/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/vps.conf"
 /etc/init.d/nginx restart
 
 mkdir /etc/systemd/system/nginx.service.d
@@ -137,15 +137,17 @@ printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.s
 rm /etc/nginx/conf.d/default.conf
 systemctl daemon-reload
 service nginx restart
+
 cd
 mkdir /home/vps
 mkdir /home/vps/public_html
-wget -O /home/vps/public_html/index.html "http://install.yudhy.net/FILE/SSH/index"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/index"
 mkdir /home/vps/public_html/ss-ws
 mkdir /home/vps/public_html/clash-ws
+
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "http://install.yudhy.net/FILE/SSH/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -164,13 +166,17 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 cd
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
 # /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 51443' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 58080' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
-sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
+echo "Want to change the VPS login port? (y/n)"
+read login
+if [ "$login" == "${login#[Yy]}" ]; then
+read -rp "Input your new VPS login port : " -e port
+sed -i 's/#Port 22/Port $port/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 5027' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
+service ssh restart
+service sshd restart
+fi
+clear
 
 echo "=== Install Dropbear ==="
 # install dropbear
@@ -186,7 +192,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "http://install.yudhy.net/FILE/OPENVPN/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/squid.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 cd
@@ -228,7 +234,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-wget http://install.yudhy.net/FILE/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+echo "Want to install OpenVPN? (y/n)"; read answer
+if [ "$answer" == "$(answer#[Yy])" ]; then
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+fi
 
 # install fail2ban
 apt -y install fail2ban
@@ -259,25 +268,24 @@ echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
+sleep 1
 
 # banner /etc/issue.net
-sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "http://install.yudhy.net/FILE/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # download script
 cd /usr/bin
-wget -O speedtest "http://install.yudhy.net/FILE/SSH/speedtest_cli.py"
-wget -O xp "http://install.yudhy.net/FILE/SSH/xp.sh"
-wget -O auto-set "http://install.yudhy.net/FILE/XRAY/auto-set.sh"
+wget -O speedtest "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/speedtest_cli.py"
+wget -O xp "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/xp.sh"
+wget -O auto-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/auto-set.sh"
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
 cd
-
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
@@ -313,6 +321,7 @@ fi
 # apt-get -y remove sendmail* >/dev/null 2>&1
 # apt autoremove -y >/dev/null 2>&1
 # finishing
+
 cd
 chown -R www-data:www-data /home/vps/public_html
 sleep 1
