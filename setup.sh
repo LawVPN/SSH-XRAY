@@ -154,43 +154,154 @@ echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
-
 #Install Xray
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED XRAY          |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget http://install.yudhy.net/FILE/XRAY/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Install SSH Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget http://install.yudhy.net/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget http://install.yudhy.net/FILE/OPENVPN/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #Install AutoBackup
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED AUTO BACKUP           |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
-wget http://install.yudhy.net/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
-
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #Download Extra Menu
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
-wget http://install.yudhy.net/FILE/MENU/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/update.sh && chmod +x update.sh && ./update.sh
 clear
+
+############# LawNET #############
+
+cat> /root/.profile << END
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ "$BASH" ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+mesg n || true
+clear
+#menu
+vnstat -d
+vnstat -m
+END
+chmod 644 /root/.profile
+
+############# LawNET #############
+
+if [ -f "/root/log-install.txt" ]; then
+rm /root/log-install.txt > /dev/null 2>&1
+fi
+if [ -f "/etc/afak.conf" ]; then
+rm /etc/afak.conf > /dev/null 2>&1
+fi
+if [ ! -f "/etc/log-create-user.log" ]; then
+echo "Log All Account " > /etc/log-create-user.log
+fi
+history -c
+serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version  )
+echo $serverV > /opt/.ver
+aureb=$(cat /home/re_otm)
+b=11
+if [ $aureb -gt $b ]
+then
+gg="PM"
+else
+gg="AM"
+fi
+curl -sS ifconfig.me > /etc/myipvps
+
+############# LawNET #############
+
+echo " "
+echo "Installation has been completed!!"
+echo " "
+echo "=========================[SCRIPT PREMIUM]========================"
+echo ""  | tee -a log-install.txt
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI SSH ]" | tee -a log-install.txt
+echo "    -------------------------" | tee -a log-install.txt
+echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
+echo "   - Stunnel4                : 447, 777"  | tee -a log-install.txt
+echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
+echo "   - SSH Websocket           : 80"  | tee -a log-install.txt
+echo "   - SSH SSL Websocket       : 443"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI  Badvpn, Nginx]" | tee -a log-install.txt
+echo "    ---------------------------" | tee -a log-install.txt
+echo "   - Badvpn                  : 7100-7900"  | tee -a log-install.txt
+echo "   - Nginx                   : 81"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI Shadowsocks-R & Shadowsocks]"  | tee -a log-install.txt
+echo "    ---------------------------------------" | tee -a log-install.txt
+echo "   - Websocket Shadowsocks   : 443"  | tee -a log-install.txt
+echo "   - Shadowsocks GRPC        : 443"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI XRAY]"  | tee -a log-install.txt
+echo "    ----------------" | tee -a log-install.txt
+echo "   - Xray Vmess Ws Tls       : 443"  | tee -a log-install.txt
+echo "   - Xray Vless Ws Tls       : 443"  | tee -a log-install.txt
+echo "   - Xray Vmess Ws None Tls  : 80"  | tee -a log-install.txt
+echo "   - Xray Vless Ws None Tls  : 80"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "    [INFORMASI TROJAN]"  | tee -a log-install.txt
+echo "    ------------------" | tee -a log-install.txt
+echo "   - Websocket Trojan        : 443"  | tee -a log-install.txt
+echo "   - Trojan GRPC             : 443"  | tee -a log-install.txt
+echo "   --------------------------------------------------------------" | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
+echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
+echo "   - Auto Reboot On           : $aureb:00 $gg GMT +7" | tee -a log-install.txt
+echo "   - Custom Path " | tee -a log-install.txt
+echo "   - Auto Backup Data" | tee -a log-install.txt
+echo "   - AutoKill Multi Login User" | tee -a log-install.txt
+echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Fully Automatic Script" | tee -a log-install.txt
+echo "   - VPS Settings" | tee -a log-install.txt
+echo "   - Admin Control" | tee -a log-install.txt
+echo "   - Backup & Restore Data" | tee -a log-install.txt
+echo "   - Full Orders For Various Services" | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "=========================[SCRIPT PREMIUM]========================"
+echo ""
+sleep 3
+echo -e "    ${tyblue}.------------------------------------------.${NC}"
+echo -e "    ${tyblue}|     SUCCESFULLY INSTALLED THE SCRIPT     |${NC}"
+echo -e "    ${tyblue}'------------------------------------------'${NC}"
+echo ""
+echo -e "   ${tyblue}Your VPS Will Be Automatical Reboot In 10 seconds${NC}"
+rm /root/cf.sh >/dev/null 2>&1
+rm /root/setup.sh >/dev/null 2>&1
+rm /root/insshws.sh 
+rm /root/update.sh
+sleep 10
+reboot
