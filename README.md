@@ -1,4 +1,4 @@
-# Script Autoinstaller for Sshws and Xray
+# Script Autoinstaller for SSHws and Xray
 Support only Debian 10, silakan yang pakai ubuntu atau distribusi dan versi yang lain, rebuild vpsnya ke Debian 10
 
 ## Installer
