@@ -14,7 +14,7 @@ sudo su
 apt update; apt install -y vnstat htop nload; apt upgrade -y; update-grub; reboot
 ```
 
-### Note untuk squid not running atau error
+### Catatan untuk squid error atau not running
 Pastikan edit banner dan buat agar tidak terlalu panjang
 ```
 nano /etc/issue.net
