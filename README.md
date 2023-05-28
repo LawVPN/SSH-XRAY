@@ -7,8 +7,9 @@ wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/setup.sh && chmod +x
 ```
 
 Jika sudah menggunakan Debian 10 tetapi masih mendapati error saat install script, silakan copy paste kode di bawah dan install scriptnya lagi.
+``` sudo su ```
 ```
-sudo su; apt update; apt install -y vnstat htop nload; apt upgrade -y; update-grub; reboot
+apt update; apt install -y vnstat htop nload; apt upgrade -y; update-grub; reboot
 ```
 
 ### Note untuk squid not running atau error
