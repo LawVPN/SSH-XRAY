@@ -168,10 +168,10 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
 # /etc/ssh/sshd_config
 echo "Want to change the VPS login port? (y/n)"
 read login
-if [ "$login" == "${login#[Yy]}" ]; then
+if [ "$login" != "${login#[Yy]}" ]; then
 read -rp "Input your new VPS login port : " -e port
-sed -i 's/#Port 22/Port $port/g' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port 5027' /etc/ssh/sshd_config
+sed -i 's/#Port 22/Port ${port}/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port $port' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 service ssh restart
 service sshd restart
@@ -235,7 +235,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
 #OpenVPN
 echo "Want to install OpenVPN? (y/n)"; read answer
-if [ "$answer" == "$(answer#[Yy])" ]; then
+if [ "$answer" != "$(answer#[Yy])" ]; then
 wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 fi
 
