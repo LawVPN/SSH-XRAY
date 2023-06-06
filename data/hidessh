@@ -20,8 +20,8 @@ source /root/color
 source /root/color.sh
 clear
 
-aktif="${COLOR1}[${WH}ON${COLOR1}]$NC"
-noaktif="${COLOR1}[${RED}OFF${COLOR1}]$NC"
+aktif="${COLOR1}[ ${WH}ON${COLOR1} ]$NC"
+noaktif="${COLOR1}[ ${RED}OFF${COLOR1} ]$NC"
 
 if [ -f "/usr/local/bin/add-vmess-user" ]; then
     status="$aktif"
@@ -138,7 +138,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
-rm /etc/hidetemp/store.txt
+echo "" > /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
@@ -149,7 +149,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 ${WH}  PLUGIN STATUS : $status - [ ${WH}$uuiduser${NC} ] "
+echo -e " $COLOR1 ${WH}  PLUGIN STATUS : $status ${COLOR1}- [ ${WH}$uuiduser${COLOR1} ] "
 echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
