@@ -67,7 +67,7 @@ wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-trojan-
 sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
 chmod +x /usr/local/bin/*
-cleep 2
+sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
 sleep 2
 echo ""
@@ -107,7 +107,7 @@ wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-tr
 sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
 chmod +x /usr/local/bin/*
-cleep 2
+sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
 sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
@@ -154,11 +154,11 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1  ${WH}PLUGIN STATUS : ${NC}[ ${COLOR1}$status${NC} ] - [ ${COLOR1}$uuiduser${NC} ] "
+echo -e "$COLOR1  ${WH}PLUGIN STATUS : $status - [ ${COLOR1}$uuiduser${NC} ] "
 echo ""
-echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01]${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
-echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02]${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
-echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}03]${WH}] ${COLOR1}• ${WH}UNINSTALL PLUGIN HIDESSH                        $COLOR1 ${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}03${WH}] ${COLOR1}• ${WH}UNINSTALL PLUGIN HIDESSH                        $COLOR1 ${NC}"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK$NC"
@@ -173,6 +173,6 @@ case $opt in
 01 | 1) clear ; insUUID ;;
 02 | 2) clear ; insUSER ;;
 03 | 3) clear ; unplug ;;
-00 | 0) clear ; menu ;;
+00 | 0) clear ; menu-set ;;
 *) clear ; menu-set ;;
 esac
