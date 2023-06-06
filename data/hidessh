@@ -3,6 +3,12 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
+if [ -f /etc/hidetemp/store.txt ]; then
+    mkdir -p /etc/hidetemp
+else
+    clear
+fi
+
 colornow=$(cat /etc/yudhynetwork/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
@@ -19,13 +25,7 @@ noaktif="${NC}[${RED}OFF${NC}]"
 
 if [ -f "/usr/local/bin/add-vmess-user" ]; then
     status="$aktif"
-    word="$uuid"
-    loc="/usr/local/bin/add-vmess-user"
-    if grep -q "$uuid" "$loc"; then
-        uuiduser="\$UUID"
-    else
-        uuiduser="\$USER"
-    fi
+    uuiduser=$(cat /etc/hidetemp/store.txt)
 else
     status="$noaktif"
     uuiduser="-"
@@ -65,12 +65,14 @@ echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin inst
 sleep 2
 echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
+sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 cd
 echo ""
+echo -e "$UUID" > /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
@@ -104,12 +106,14 @@ sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
 sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
+sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 cd
 echo ""
+echo "$USER" > /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
@@ -131,12 +135,13 @@ rm -f /usr/local/bin/del-vmess-user
 rm -f /usr/local/bin/del-trojan-user
 sleep 2
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin deleted successfully!           $COLOR1 ${NC}"
-echo ""
+echo ""; sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
+rm /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
