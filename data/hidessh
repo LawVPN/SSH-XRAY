@@ -149,7 +149,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1  ${WH}  PLUGIN STATUS : $status - [ ${WH}$uuiduser${NC} ] "
+echo -e " $COLOR1 ${WH}  PLUGIN STATUS : $status - [ ${WH}$uuiduser${NC} ] "
 echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
