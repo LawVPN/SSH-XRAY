@@ -4,9 +4,9 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 if [ -f /etc/hidetemp/store.txt ]; then
-    mkdir -p /etc/hidetemp
-else
     clear
+else
+    mkdir -p /etc/hidetemp
 fi
 
 colornow=$(cat /etc/yudhynetwork/theme/color.conf)
