@@ -1,0 +1,178 @@
+#!/bin/bash
+
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+
+#Hidessh addons for LawVPN repo
+if [ -f "/etc/Lawnetwork/theme/color.conf" ]; then
+    clear
+else
+    cp -R /etc/yudhynetwork/theme /etc/Lawnetwork/theme
+fi
+
+colornow=$(cat /etc/Lawnetwork/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m" 
+COLOR1="$(cat /etc/Lawnetwork/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/Lawnetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
+WH='\033[1;37m' 
+
+source /root/color
+source /root/color.sh
+clear
+
+aktif="${NC}[${green}ON${NC}]"
+noaktif="${NC}[${RED}OFF${NC}]"
+
+if [ -f "/usr/local/bin/add-vmess-user" ]; then
+    status="$aktif"
+    word="$uuid"
+    loc="/usr/local/bin/add-vmess-user"
+    if grep -q "$uuid" "$loc"; then
+        uuiduser="\$UUID"
+    else
+        uuiduser="\$USER"
+    fi
+else
+    status="$noaktif"
+    uuiduser="-"
+fi
+
+
+
+
+
+function insUUID(){
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Deleting unecessary files...           $COLOR1 ${NC}"
+rm -f /usr/local/bin/add-ssh-user
+rm -f /usr/local/bin/add-vmess-user
+rm -f /usr/local/bin/add-trojan-user
+rm -f /usr/local/bin/del-ssh-user
+rm -f /usr/local/bin/del-vmess-user
+rm -f /usr/local/bin/del-trojan-user
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Downloading the plugins...           $COLOR1 ${NC}"
+cd /usr/local/bin
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/add-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/add-vmess-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/add-trojan-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-vmess-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-trojan-user
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
+chmod +x /usr/local/bin/*
+cleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
+sleep 2
+echo ""
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+cd
+echo ""
+read -n 1 -s -r -p "  Press any key to back on menu"
+hidessh
+}
+
+function insUSER(){
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Deleting unecessary files...           $COLOR1 ${NC}"
+rm -f /usr/local/bin/add-ssh-user
+rm -f /usr/local/bin/add-vmess-user
+rm -f /usr/local/bin/add-trojan-user
+rm -f /usr/local/bin/del-ssh-user
+rm -f /usr/local/bin/del-vmess-user
+rm -f /usr/local/bin/del-trojan-user
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Downloading the plugins...           $COLOR1 ${NC}"
+cd /usr/local/bin
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-vmess-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-trojan-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-vmess-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-trojan-user
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
+chmod +x /usr/local/bin/*
+cleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+cd
+echo ""
+read -n 1 -s -r -p "  Press any key to back on menu"
+hidessh
+}
+
+
+function unplug(){
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo ""
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Deleting unecessary files...           $COLOR1 ${NC}"
+rm -f /usr/local/bin/add-ssh-user
+rm -f /usr/local/bin/add-vmess-user
+rm -f /usr/local/bin/add-trojan-user
+rm -f /usr/local/bin/del-ssh-user
+rm -f /usr/local/bin/del-vmess-user
+rm -f /usr/local/bin/del-trojan-user
+sleep 2
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin deleted successfully!           $COLOR1 ${NC}"
+echo ""
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo ""
+read -n 1 -s -r -p "  Press any key to back on menu"
+hidessh
+}
+
+
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1  ${WH}PLUGIN STATUS : ${NC}[ ${COLOR1}$status${NC} ] - [ ${COLOR1}$uuiduser${NC} ] "
+echo ""
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01]${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02]${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}03]${WH}] ${COLOR1}• ${WH}UNINSTALL PLUGIN HIDESSH                        $COLOR1 ${NC}"
+echo -e " $COLOR1 $NC"
+echo -e " $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo ""
+echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+
+case $opt in
+01 | 1) clear ; insUUID ;;
+02 | 2) clear ; insUSER ;;
+03 | 3) clear ; unplug ;;
+00 | 0) clear ; menu ;;
+*) clear ; menu-set ;;
+esac
