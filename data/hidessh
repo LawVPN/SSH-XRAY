@@ -161,7 +161,7 @@ echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}] ${COLOR1}• ${WH}INSTALL PLUGI
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}03${WH}] ${COLOR1}• ${WH}UNINSTALL PLUGIN HIDESSH                        $COLOR1 ${NC}"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK$NC"
+echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                  $COLOR1 $NC"
