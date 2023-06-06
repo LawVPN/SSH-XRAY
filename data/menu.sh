@@ -193,7 +193,7 @@ echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) Latest Ve
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LifeTime${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• YUDHY NETWORK 2023 •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
