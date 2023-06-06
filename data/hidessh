@@ -31,10 +31,6 @@ else
     uuiduser="-"
 fi
 
-
-
-
-
 function insUUID(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -48,7 +44,7 @@ rm -f /usr/local/bin/add-trojan-user
 rm -f /usr/local/bin/del-ssh-user
 rm -f /usr/local/bin/del-vmess-user
 rm -f /usr/local/bin/del-trojan-user
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Downloading the plugins...           $COLOR1 ${NC}"
 cd /usr/local/bin
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/add-ssh-user
@@ -57,12 +53,12 @@ wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/add-trojan-
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-ssh-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-vmess-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/del-trojan-user
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
 chmod +x /usr/local/bin/*
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
-sleep 2
+sleep .5
 echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
 sleep 2
@@ -90,7 +86,7 @@ rm -f /usr/local/bin/add-trojan-user
 rm -f /usr/local/bin/del-ssh-user
 rm -f /usr/local/bin/del-vmess-user
 rm -f /usr/local/bin/del-trojan-user
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Downloading the plugins...           $COLOR1 ${NC}"
 cd /usr/local/bin
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-ssh-user
@@ -99,12 +95,12 @@ wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-tr
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-ssh-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-vmess-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-trojan-user
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Installing the plugins...           $COLOR1 ${NC}"
 chmod +x /usr/local/bin/*
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
-sleep 2
+sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
 sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -133,7 +129,7 @@ rm -f /usr/local/bin/add-trojan-user
 rm -f /usr/local/bin/del-ssh-user
 rm -f /usr/local/bin/del-vmess-user
 rm -f /usr/local/bin/del-trojan-user
-sleep 2
+sleep 0.5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin deleted successfully!           $COLOR1 ${NC}"
 echo ""; sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
