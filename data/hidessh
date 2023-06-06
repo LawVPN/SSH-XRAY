@@ -20,8 +20,8 @@ source /root/color
 source /root/color.sh
 clear
 
-aktif="${NC}[${green}ON${NC}]"
-noaktif="${NC}[${RED}OFF${NC}]"
+aktif="${COLOR1}[${green}ON${COLOR1}]$NC"
+noaktif="${COLOR1}[${RED}OFF${COLOR1}]$NC"
 
 if [ -f "/usr/local/bin/add-vmess-user" ]; then
     status="$aktif"
@@ -68,7 +68,7 @@ echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}             
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 cd
 echo ""
-echo -e "$UUID" > /etc/hidetemp/store.txt
+echo -e "\$UUID" > /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
@@ -101,6 +101,7 @@ chmod +x /usr/local/bin/*
 sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Plugin installed successfully!           $COLOR1 ${NC}"
 sleep .5
+echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Selecting another plugin will replace the current plugin           $COLOR1 ${NC}"
 sleep 2
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -109,7 +110,7 @@ echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}             
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 cd
 echo ""
-echo "$USER" > /etc/hidetemp/store.txt
+echo "\$USER" > /etc/hidetemp/store.txt
 read -n 1 -s -r -p "  Press any key to back on menu"
 hidessh
 }
@@ -148,7 +149,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• PLUGIN SETTING •              $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1  ${WH}PLUGIN STATUS : $status - [ ${COLOR1}$uuiduser${NC} ] "
+echo -e "$COLOR1  ${WH}PLUGIN STATUS : $status - [ ${WH}$uuiduser${NC} ] "
 echo ""
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}01${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [UUID]                        $COLOR1 ${NC}"
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}] ${COLOR1}• ${WH}INSTALL PLUGIN HIDESSH [USER]                        $COLOR1 ${NC}"
