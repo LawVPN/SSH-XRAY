@@ -1,16 +1,16 @@
 #!/bin/bash
 cd
-wget -O /usr/local/bin/ws-dropbear http://install.yudhy.net/FILE/WEBSOCKET/dropbear-ws.py
-wget -O /usr/local/bin/ws-stunnel http://install.yudhy.net/FILE/WEBSOCKET/ws-stunnel
-wget -O /usr/local/bin/ws-ovpn http://install.yudhy.net/FILE/OPENVPN/ws-ovpn.py
+wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/dropbear-ws.py
+wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ws-stunnel
+wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ws-ovpn.py
 
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 chmod +x /usr/local/bin/ws-ovpn
 
-wget -O /etc/systemd/system/ws-dropbear.service http://install.yudhy.net/FILE/WEBSOCKET/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
-wget -O /etc/systemd/system/ws-stunnel.service http://install.yudhy.net/FILE/WEBSOCKET/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
-wget -O /etc/systemd/system/ws-ovpn.service http://install.yudhy.net/FILE/OPENVPN/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
+wget -O /etc/systemd/system/ws-dropbear.service http://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O /etc/systemd/system/ws-stunnel.service http://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O /etc/systemd/system/ws-ovpn.service http://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/ws-ovpn.service && chmod +x /etc/systemd/system/ws-ovpn.service
 
 systemctl daemon-reload
 systemctl enable ws-dropbear.service
