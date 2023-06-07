@@ -27,6 +27,7 @@ wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/LawVPN/SSH-XRAY
 wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/restart.sh" && chmod +x /usr/bin/restart
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/update.sh" && chmod +x /usr/bin/update
 echo -e " [INFO] Update Successfully"
+wget -q -O /opt/.ver "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version"
 echo ""
 sleep 2
 read -n 1 -s -r -p "Press any key to back on menu";
