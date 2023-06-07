@@ -135,7 +135,7 @@ echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}VLESS                            ${CO
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}TROJAN                           ${COLOR1}• $restr"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -185,7 +185,7 @@ echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}All Service
 sleep 1
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -239,15 +239,16 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1  $NC$COLBG1               ${WH}• VPS SETTING •                 $COLOR1  $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}RUNNING           ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TCP TWEAK"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SET BANNER        ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}RESTART ALL"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}BANDWITH USAGE    ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTO REBOOT"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}ANTI TORRENT${NC} $sts  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}RUNNING           ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}RESTART ALL"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SET BANNER        ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}AUTO REBOOT"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}BANDWITH USAGE    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}ANTI TORRENT${NC} $sts  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}HIDESSH"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TCP TWEAK         ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}REGION CHECKER"
 echo -e " $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -260,6 +261,8 @@ case $opt in
 06 | 6) clear ; restart ;;
 07 | 7) clear ; autoboot ;;
 08 | 8) clear ; mspeed ;;
+09 | 9) clear ; hidessh ;;
+10) clear ; regionchecker ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
