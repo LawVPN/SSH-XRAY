@@ -182,14 +182,15 @@ if [[ $serverV > $myver ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${WH}UPDATE TO V$serverV${NC} " 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+ltsver="[Update Available]"
 #up2u="updatews"
 up2u="updatews"
 else
+ltsver="Latest Version"
 up2u="menu"
 fi
-
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) Latest Version${NC}"
+echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) $ltsver${NC}"
 echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Lukman Priya${NC}"
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LifeTime${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
