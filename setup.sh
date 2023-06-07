@@ -303,5 +303,14 @@ rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh 
 rm /root/update.sh
+
+echo ""
+echo -e "Setting up autorefresh on xray user login"
+#echo -ne "Choose between 1-30 minutes: "; read afresh
+wget -q -O /usr/bin/clear-log raw.githubusercontent.com/LawNetwork/Autoscript/main/xray/clear-log
+chmod +x /usr/bin/clear-log; cd
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/addons/crontab.sh
+chmod +x crontab.sh; ./crontab.sh; rm crontab.sh
+
 sleep 10
 reboot
