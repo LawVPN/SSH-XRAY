@@ -164,18 +164,18 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 
 # setting port ssh
 cd
-sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
+#sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
 # /etc/ssh/sshd_config
-echo "Want to change the VPS login port? (y/n)"
-read login
-if [ "$login" != "${login#[Yy]}" ]; then
-read -rp "Input your new VPS login port : " -e port
-sed -i 's/#Port 22/Port ${port}/g' /etc/ssh/sshd_config
-sed -i '/Port 22/a Port $port' /etc/ssh/sshd_config
-/etc/init.d/ssh restart
-service ssh restart
-service sshd restart
-fi
+#echo "Want to change the VPS login port? (y/n)"
+#read login
+#if [ "$login" != "${login#[Yy]}" ]; then
+#read -rp "Input your new VPS login port : " -e port
+#sed -i 's/#Port 22/Port ${port}/g' /etc/ssh/sshd_config
+#sed -i '/Port 22/a Port $port' /etc/ssh/sshd_config
+#/etc/init.d/ssh restart
+#service ssh restart
+#service sshd restart
+#fi
 clear
 
 echo "=== Install Dropbear ==="
@@ -234,10 +234,10 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
 #OpenVPN
-echo "Want to install OpenVPN? (y/n)"; read answer
-if [ "$answer" != "$(answer#[Yy])" ]; then
+#echo "Want to install OpenVPN? (y/n)"; read answer
+#if [ "$answer" != "$(answer#[Yy])" ]; then
 wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
-fi
+#fi
 
 # install fail2ban
 apt -y install fail2ban
