@@ -119,7 +119,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 sleep 2
-wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/install-up.sh" && chmod +x /root/install_up.sh
+wget -q -O /root/update.sh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/update.sh" && chmod +x /root/update.sh
 sleep 2
 ./install_up.sh
 sleep 5
@@ -146,7 +146,7 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/versi)
+serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
 uis="${COLOR1}Premium Version$NC"
 echo -e "$COLOR1 $NC ${WH}User Roles     ${COLOR1}: ${WH}$uis"
 if [ "$cekup" = "day" ]; then
@@ -183,7 +183,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${WH}UPDATE TO V$serverV${NC} " 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 #up2u="updatews"
-up2u="update"
+up2u="updatews"
 else
 up2u="menu"
 fi
