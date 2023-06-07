@@ -312,5 +312,9 @@ chmod +x /usr/bin/clear-log; cd
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/addons/crontab.sh
 chmod +x crontab.sh; ./crontab.sh; rm crontab.sh
 
+echo "#!/bin/bash" > /usr/bin/regionchecker
+echo "bash <(curl -L -s https://s.id/netflixchecker) -E -M 4" >> /usr/bin/regionchecker
+chmod +x /usr/bin/regionchecker
+
 sleep 10
 reboot
