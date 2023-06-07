@@ -25,7 +25,7 @@ if [ -z $user ]; then
 echo -e "$COLOR1 ${NC} [Error] Username cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• YUDHY NETWORK •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -42,7 +42,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} Please choose another name."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -310,7 +310,7 @@ echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1 ${NC} Link JSON : http://${domain}:81/ss-ws/ss-$user.txt"  
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""  
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -328,7 +328,7 @@ if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1 ${NC}  • You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -344,7 +344,7 @@ echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  ${COLOR1}• ${WH}[${COLOR1}NOTE${WH}] Press any key to back on menu"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
@@ -376,7 +376,7 @@ echo -e "$COLOR1 ${NC}   ${WH}Days Added  ${COLOR1}: ${WH}$masaaktif Days"
 echo -e "$COLOR1 ${NC}   ${WH}Expired On  ${COLOR1}: ${WH}$exp4"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -395,7 +395,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}  ${COLOR1}• ${WH}You Dont have any existing clients!${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -430,7 +430,7 @@ echo -e "$COLOR1 ${NC}   ${COLOR1}• ${WH}Client Name ${COLOR1}: ${WH}$user${NC
 echo -e "$COLOR1 ${NC}   ${COLOR1}• ${WH}Expired On  ${COLOR1}: ${WH}$exp${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -474,7 +474,7 @@ echo > /dev/null
 else
 jum2=$(cat /tmp/ipssws.txt | nl)
 echo -e "$COLOR1 ${NC}   user : $akun";
-echo -e "$COLOR1 ${NC}   $jum2";
+echo -e "$COLOR1${NC}$jum2";
 fi
 rm -rf /tmp/ipssws.txt
 done
@@ -482,7 +482,7 @@ done
 rm -rf /tmp/other.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -500,7 +500,7 @@ echo -e " $COLOR1 $NC                                              ${NC} $COLOR1
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• LawNET •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
