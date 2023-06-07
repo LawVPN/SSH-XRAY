@@ -130,7 +130,7 @@ echo "$version_up" > /opt/.ver
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}              ${WH}• YUDHY NETWORK •${NC}                $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -189,7 +189,7 @@ fi
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) Latest Version${NC}"
-#echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Yudhy DM${NC}"
+echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Lukman Priya${NC}"
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LifeTime${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
