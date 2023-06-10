@@ -28,6 +28,7 @@ wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/m
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/update.sh" && chmod +x /usr/bin/update
 echo -e " [INFO] Update Successfully"
 wget -q -O /opt/.ver "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version"
+wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/autoboot.sh" && chmod +x /usr/bin/autoboot
 echo ""
 sleep 2
 read -n 1 -s -r -p "Press any key to back on menu";
