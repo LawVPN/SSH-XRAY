@@ -29,7 +29,9 @@ wget -q -O /usr/bin/update "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/ma
 echo -e " [INFO] Update Successfully"
 wget -q -O /opt/.ver "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version"
 wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/autoboot.sh" && chmod +x /usr/bin/autoboot
+wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
 echo ""
 sleep 2
+echo -e " [INFO] Update UDP SSH soon!"
 read -n 1 -s -r -p "Press any key to back on menu";
 menu
