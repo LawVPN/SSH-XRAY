@@ -32,6 +32,12 @@ wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/
 wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
 echo ""
 sleep 2
+echo -e " [INFO] Changelogs on v1.0.5 :
+ 1. Fixed minor bugs
+ 2. Added HideSSH plugins
+ 3. Changed the autoreboot time for every 24 hours from 12 a.m to 5 a.m"
+sleep 2
+echo ""
 echo -e " [INFO] Update UDP SSH soon!"
 read -n 1 -s -r -p "Press any key to back on menu";
 menu
