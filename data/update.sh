@@ -40,5 +40,6 @@ sleep 2
 echo ""
 echo -e " [INFO] Update UDP SSH soon!"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu";
-menu
+sleep 5
+#read -n 1 -s -r -p "Press any key to back on menu";
+#menu
