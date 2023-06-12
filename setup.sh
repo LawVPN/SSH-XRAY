@@ -297,8 +297,7 @@ sleep 3
 echo -e "    ${tyblue}.------------------------------------------.${NC}"
 echo -e "    ${tyblue}|     SUCCESFULLY INSTALLED THE SCRIPT     |${NC}"
 echo -e "    ${tyblue}'------------------------------------------'${NC}"
-echo ""
-echo -e "   ${tyblue}Your VPS Will Be Automatical Reboot In 10 seconds${NC}"
+
 rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh 
@@ -315,6 +314,9 @@ chmod +x crontab.sh; ./crontab.sh; rm crontab.sh
 echo "#!/bin/bash" > /usr/bin/regionchecker
 echo "bash <(curl -L -s https://s.id/netflixchecker) -E -M 4" >> /usr/bin/regionchecker
 chmod +x /usr/bin/regionchecker
+
+echo ""
+echo -e "   ${tyblue}Your VPS Will Be Automatical Reboot In 10 seconds${NC}"
 
 sleep 10
 reboot
