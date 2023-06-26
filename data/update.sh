@@ -47,12 +47,11 @@ echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •      
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
-echo -e "
-[INFO] Update Successfully
-[INFO] Changelogs on v1.0.6 :
-  ➢ Fixed speedtest error (now using from the official website)
-  ➢ Fixed other minor bugs
-[INFO] Changelogs on v1.0.5 :
-  ➢ Fixed minor bugs
-  ➢ Added HideSSH plugins
-  ➢ Changed the autoreboot time for every 24 hours from 12 a.m to 5 a.m"
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.6 :
+     ➢ Fixed speedtest error
+     ➢ Fixed other minor bugs
+   $COLOR1[INFO] ${NC}Changelogs on v1.0.5 :
+     ➢ Fixed minor bugs
+     ➢ Added HideSSH plugins
+     ➢ Changed the autoreboot time for every 24hours
+        from 00.00 to 05.00 WIB"
