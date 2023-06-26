@@ -50,6 +50,7 @@ echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.6 :
      ➢ Fixed speedtest error
      ➢ Fixed other minor bugs
+     ➢ Removed bandwidth usage on menu
    $COLOR1[INFO] ${NC}Changelogs on v1.0.5 :
      ➢ Fixed minor bugs
      ➢ Added HideSSH plugins
