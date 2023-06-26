@@ -34,17 +34,16 @@ echo ""
 sleep 2; clear
 
 # 1.0.6
-cd
+cd; clear
 wget -q https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/speedtest.sh; chmod +x speedtest.sh && ./speedtest.sh && rm speedtest.sh
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 
 
 
-echo -e " [INFO] Update Successfully"; sleep 2
-
 echo -e "╔═════════════════════════════════════════════════════════════════════════╗
-║ [INFO] Changelogs on v1.0.6                                             ║
+║ [INFO] Update Successfully
+║ [INFO] Changelogs on v1.0.6 :                                           ║
 ║   ➢ Fixed speedtest error (now using from the official website)         ║
 ║   ➢ Fixed other minor bugs                                              ║
 ║ [INFO] Changelogs on v1.0.5 :                                           ║
