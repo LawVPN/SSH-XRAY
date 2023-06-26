@@ -40,16 +40,19 @@ wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRA
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 
 
+clear
 
-echo -e "╔═════════════════════════════════════════════════════════════════════════╗
-║ [INFO] Update Successfully
-║ [INFO] Changelogs on v1.0.6 :                                           ║
-║   ➢ Fixed speedtest error (now using from the official website)         ║
-║   ➢ Fixed other minor bugs                                              ║
-║ [INFO] Changelogs on v1.0.5 :                                           ║
-║   ➢ Fixed minor bugs                                                    ║
-║   ➢ Added HideSSH plugins                                               ║
-║   ➢ Changed the autoreboot time for every 24 hours from 12 a.m to 5 a.m ║
-╚═════════════════════════════════════════════════════════════════════════╝
-"; sleep 2
-echo "exit in 15 seconds"; sleep 15
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
+echo -e "
+[INFO] Update Successfully
+[INFO] Changelogs on v1.0.6 :
+  ➢ Fixed speedtest error (now using from the official website)
+  ➢ Fixed other minor bugs
+[INFO] Changelogs on v1.0.5 :
+  ➢ Fixed minor bugs
+  ➢ Added HideSSH plugins
+  ➢ Changed the autoreboot time for every 24 hours from 12 a.m to 5 a.m"
