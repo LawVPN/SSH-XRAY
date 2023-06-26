@@ -110,9 +110,10 @@ read -n 1 -s -r -p "  Press any key to Renew Cret"
 crtxray
 fi
 }
+
+
 function updatews(){
 clear
-
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -123,9 +124,9 @@ wget -q -O /root/update.sh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/ma
 sleep 2
 ./update.sh
 rm /root/update.sh
-rm /opt/.ver
-version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
-echo "$version_up" > /opt/.ver
+#rm /opt/.ver
+#version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
+#echo "$version_up" > /opt/.ver
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
