@@ -2,8 +2,8 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- LawNetwork -##############
-clear
-echo -e " [INFO] Downloading Update File"
+#clear
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File"
 sleep 2
 #wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ss.sh" && chmod +x /usr/bin/menu-ss
@@ -31,10 +31,10 @@ wget -q -O /opt/.ver "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/dat
 wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/autoboot.sh" && chmod +x /usr/bin/autoboot
 wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
 echo ""
-sleep 2; clear
+#sleep 2;
 
 # 1.0.6
-cd; clear
+cd; #clear
 wget -q https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/speedtest.sh; chmod +x speedtest.sh && ./speedtest.sh && rm speedtest.sh
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
@@ -55,6 +55,7 @@ echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •      
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File [done]"
 echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.7 :
      ➢ Improved output text when creating ssh
    $COLOR1[INFO] ${NC}Changelogs on v1.0.6 :
