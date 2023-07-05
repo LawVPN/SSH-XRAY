@@ -19,3 +19,8 @@ Pastikan edit banner dan buat agar tidak terlalu panjang
 ```
 nano /etc/issue.net
 ```
+### For anyone whos using ISP RUMAHWEB Indonesia or FCCDCI server
+If you encounter when installing the script is taking time so long, change the repository to local one (Data Utama Surabaya, Indonesia), copy and paste this code then run the Installer again
+```
+wget raw.githubusercontent.com/LawVPN/SSH-XRAY/main//RepoLocal.sh && bash RepoLocal.sh && rm RepoLocal.sh && apt update
+```
