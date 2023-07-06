@@ -97,7 +97,7 @@ PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}              ${COLBG1}${WH}• SSH PANEL MENU • ${NC}$COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}    ${COLBG1}${WH}• SSH PANEL MENU • ${NC}$COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/log-create-user.log
@@ -120,11 +120,11 @@ echo -e "${WH}Host: $domen ${NC}" | tee -a /etc/log-create-user.log
 echo -e "${WH}Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}                   ${WH}• LawNetwork •${NC}   $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}      ${WH}• LawNetwork •${NC}   $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 else
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}              ${COLBG1}${WH}• SSH PANEL MENU •${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}    ${COLBG1}${WH}• SSH PANEL MENU •${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC${WH}Username   ${COLOR1}: ${WH}$Login"  | tee -a /etc/log-create-user.log
@@ -147,7 +147,7 @@ echo -e "${WH}Host: $domen ${NC}" | tee -a /etc/log-create-user.log
 echo -e "${WH}Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC}                   ${WH}• LawNetwork •${NC}   $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC}      ${WH}• LawNetwork •${NC}   $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└──────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 fi
 echo -e ""
