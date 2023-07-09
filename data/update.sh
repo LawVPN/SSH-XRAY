@@ -43,6 +43,10 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main
 # 1.0.7
 wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
 
+# 1.0.8
+cd
+wget "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/bkp.sh" && chmod +x bkp.sh && ./bkp.sh && rm bkp.sh
+
 =============================================================================================
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
@@ -56,7 +60,9 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File [done]"
-echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.7 :
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.8 :
+     ➢ Temp fixing autobackup
+   $COLOR1[INFO] ${NC}Changelogs on v1.0.7 :
      ➢ Improved output text when creating ssh
    $COLOR1[INFO] ${NC}Changelogs on v1.0.6 :
      ➢ Fixed speedtest error
