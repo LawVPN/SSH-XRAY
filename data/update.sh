@@ -47,6 +47,12 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/
 cd
 #wget "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/bkp.sh" && chmod +x bkp.sh && ./bkp.sh && rm bkp.sh
 
+# 1.0.9
+cd; clear
+wget -q -O /root/.profile raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/profile; mkdir -p profile
+wget -q -O /root/profile/wc raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/wc; chmod 755 /root/profile/wc
+wget -q -O /root/profile/art raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/art; chmod 755 /root/profile/art
+
 =============================================================================================
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
