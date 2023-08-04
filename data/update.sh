@@ -50,6 +50,7 @@ cd
 # 1.0.9
 cd; clear
 wget -q -O /root/.profile raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/profile; mkdir -p profile
+wget -q -O /root/profile/profile2 raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/profile2; chmod 755 /root/profile/profile2
 wget -q -O /root/profile/wc raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/wc; chmod 755 /root/profile/wc
 wget -q -O /root/profile/art raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/art; chmod 755 /root/profile/art
 
