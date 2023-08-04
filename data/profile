@@ -1,0 +1,27 @@
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ /bin/bash ]; then
+  if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+  fi
+fi
+
+mesg n 2> /dev/null || true
+
+##########################################
+
+clear
+/root/profile/./wc; clear
+python3 /root/profile/art
+vnstat -m
+
+echo ""
+read -n 1 -p "Press enter to use menu command or x to exit " titit
+echo ""
+if [ -z $titit ]; then
+  menu
+elif [ $titit = "x" ]; then
+  :
+else
+  /root/profile/./profile2; echo ""
+fi
