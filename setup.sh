@@ -311,9 +311,13 @@ chmod +x /usr/bin/clear-log; cd
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/addons/crontab.sh
 chmod +x crontab.sh; ./crontab.sh; rm crontab.sh
 
-echo "#!/bin/bash" > /usr/bin/regionchecker
-echo "bash <(curl -L -s https://s.id/netflixchecker) -E -M 4" >> /usr/bin/regionchecker
+echo "#!/bin/bash
+bash <(curl -L -s https://s.id/netflixchecker) -E -M 4" > /usr/bin/regionchecker
 chmod +x /usr/bin/regionchecker
+
+echo "Changing the version to the oldest so you can update manually.."
+echo "0.0.1" > /opt/.ver; sleep 2
+echo "Changing the version to the oldest so you can update manually.. done"
 
 echo ""
 echo -e "   ${tyblue}Your VPS Will Be Automatical Reboot In 10 seconds${NC}"
