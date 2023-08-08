@@ -14,7 +14,7 @@ wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/
 #wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
 wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-theme.sh" && chmod +x /usr/bin/menu-theme
-wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
+#wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
 wget -q -O /usr/bin/menu-ip "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ip.sh" && chmod +x /usr/bin/menu-ip
 wget -q -O /usr/bin/menu-tor "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-tor.sh" && chmod +x /usr/bin/menu-tor
 wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/autoboot.sh" && chmod +x /usr/bin/autoboot
@@ -54,6 +54,15 @@ wget -q -O /root/profile/profile2 raw.githubusercontent.com/LawVPN/SSH-XRAY/main
 wget -q -O /root/profile/wc raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/wc; chmod 755 /root/profile/wc
 wget -q -O /root/profile/art raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/art; chmod 755 /root/profile/art
 
+# 1.1.0
+cd; clear; mkdir -p /etc/lukman
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
+wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh; bash dependencies.sh
+wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
+wget -q -O /usr/bin/autobackup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/autobackup.sh; chmod 755 /usr/bin/autobackup
+
+wget -q -O /usr/bin/backup_setting raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/bset.sh; chmod 755 /usr/bin/backup_setting
+
 =============================================================================================
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
@@ -67,7 +76,11 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File [done]"
-echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.0.9 :
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.0 :
+     ➢ Fixed backup menu
+     ➢ Enhancement login page
+     ➢ Fixed minor bugs
+   $COLOR1[INFO] ${NC}Changelogs on v1.0.9 :
      ➢ There some mistakes on previous update
      so i undid the changes, wait for the next update!
      ➢ We will do the best on v1.1, soon!
