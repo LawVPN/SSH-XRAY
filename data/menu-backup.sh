@@ -38,6 +38,8 @@ How to restore:
 Chat me at telegram @Law_Sky if you encounter any errors
 Thank you for using this script
 ===================================================================================="
+echo ""
+read -p "Press enter to go back" -n 1; menu-backup
 }
 
 
