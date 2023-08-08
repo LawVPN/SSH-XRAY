@@ -98,7 +98,7 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}EVERY 10 MINUTES ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}EVERY DAY $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}EVERY HOUR       ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}EVERY WEEK    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP STATUS : $status2 $status3"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}AUTOBACKUP STATUS$status2 $status3"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
