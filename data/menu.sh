@@ -128,8 +128,6 @@ rm /root/update.sh
 #version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
 #echo "$version_up" > /opt/.ver
 
-echo -e "
-$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
@@ -188,10 +186,10 @@ if [[ $serverV > $myver ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${RED}UPDATE AUTOSCRIPT TO THE NEWEST ${WH}v$serverV${NC} " 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-ltsver="『${COLOR1}Update Available${WH}』"
+ltsver="${COLOR1}Update Available${WH}』"
 up2u="updatews"
 else
-ltsver="『${COLOR1}Latest${WH}』"
+ltsver="${COLOR1}Latest${WH}』"
 up2u="menu"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
