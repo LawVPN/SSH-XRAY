@@ -101,4 +101,5 @@ echo -e "
      ➢ Fixed minor bugs
      ➢ Added HideSSH plugins
      ➢ Changed the autoreboot time for every 24hours
-     from 00.00 to 05.00 WIB"
+     from 00.00 to 05.00 WIB
+"
