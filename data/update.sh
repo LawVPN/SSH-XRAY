@@ -74,9 +74,10 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
-echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File [done]"
-echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.0 :
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates [done]"
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File  [done]"
+echo -e "
+   $COLOR1[INFO] ${NC}Changelogs on v1.1.0 :
      ➢ Fixed backup menu
      ➢ Enhancement login page
      ➢ Fixed minor bugs
