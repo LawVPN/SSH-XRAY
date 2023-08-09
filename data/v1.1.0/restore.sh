@@ -14,10 +14,10 @@ newlink="https://drive.google.com/u/4/uc?id=${id}&export=download"
 cd
 wget -q -O backup.zip "$newlink"
 
+echo Start Restore
 unzip backup.zip
 rm -f backup.zip
 sleep 1
-echo Start Restore
 cd /root/backup
 cp passwd /etc/
 cp group /etc/
@@ -30,3 +30,5 @@ cp crontab /etc/
 rm -rf /root/backup
 rm -f backup.zip
 echo Done
+
+echo "Note: You need to restart all services (go to settings) to take effect"; sleep 5
