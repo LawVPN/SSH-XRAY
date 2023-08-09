@@ -102,3 +102,5 @@ echo -e "
      ➢ Added HideSSH plugins
      ➢ Changed the autoreboot time for every 24hours
      from 00.00 to 05.00 WIB"
+echo ""
+echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
