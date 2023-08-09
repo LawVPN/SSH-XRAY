@@ -45,7 +45,7 @@ if [[ -z "$jum" ]]; then
 echo > /dev/null
 else
 jum2=$(cat /tmp/iptrojan.txt | nl)
-echo -e "$COLOR1 ${NC}user: $akun";
+echo -e "$COLOR1  ${NC}user: $akun";
 echo -e "${COLOR1}${NC}$jum2";
 fi
 rm -rf /tmp/iptrojan.txt
