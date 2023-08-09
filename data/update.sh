@@ -57,7 +57,7 @@ wget -q -O /root/profile/art raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data
 # 1.1.0
 cd; clear; mkdir -p /etc/lukman
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
-wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh; bash dependencies.sh
+wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh; bash /etc/lukman/dependencies.sh
 wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
 wget -q -O /usr/bin/autobackup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/autobackup.sh; chmod 755 /usr/bin/autobackup
 wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
