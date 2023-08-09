@@ -122,7 +122,7 @@ echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 sleep 2
 wget -q -O /root/update.sh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/update.sh" && chmod +x /root/update.sh
 sleep 2
-./update.sh
+/root/./update.sh
 rm /root/update.sh
 #rm /opt/.ver
 #version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
