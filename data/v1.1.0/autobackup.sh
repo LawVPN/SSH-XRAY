@@ -114,6 +114,6 @@ case $opt in
 03 | 3) clear ; fcday ;;
 04 | 4) clear ; fcweek ;;
 05 | 5) clear ; infos ;;
-00 | 0) clear ; menu ;;
+00 | 0) clear ; menu-backup ;;
 *) clear ; menu-backup ;;
 esac
