@@ -52,6 +52,7 @@ echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}AUTO BACK
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}BACKUP           ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}BACKUP SETTINGS    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TUTORIAL ON HOW TO USE"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL DEPENDENCIES"
 echo -e " $COLOR1 $NC                                               $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
@@ -66,6 +67,7 @@ case $opt in
 03 | 3) clear ; restore ;;
 04 | 4) clear ; backup_setting ;;
 05 | 5) clear ; infos ;;
+06 | 6) clear ; bash /etc/lukman/dependencies.sh ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 esac
