@@ -187,15 +187,15 @@ if [[ $serverV > $myver ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${RED}UPDATE AUTOSCRIPT TO THE NEWEST ${WH}v$serverV${NC} " 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-ltsver="${COLOR1}[${WH}Update Available${COLOR1}]${WH}"
+ltsver="✶ ${COLOR1}Update Available ✶${WH}"
 up2u="updatews"
 else
-ltsver="${COLOR1}[${WH}Latest${COLOR1}]${WH}"
+ltsver="✶ ${COLOR1}Latest ✶${WH}"
 up2u="menu"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) $ltsver${NC}"
-echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Lukmanpriya${NC}"
+echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}t.me/Lawvpn 🇮🇩${NC}"
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LifeTime${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
