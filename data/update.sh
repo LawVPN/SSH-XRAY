@@ -36,8 +36,8 @@ echo ""
 # 1.0.6
 cd; #clear
 wget -q https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/speedtest.sh; chmod +x speedtest.sh && ./speedtest.sh && rm speedtest.sh
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
+#wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
+#wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu.sh" && chmod +x /usr/bin/menu
 
 # 1.0.7
@@ -62,6 +62,9 @@ wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v
 wget -q -O /usr/bin/autobackup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/autobackup.sh; chmod 755 /usr/bin/autobackup
 wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
 wget -q -O /usr/bin/backup_setting raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/bset.sh; chmod 755 /usr/bin/backup_setting
+
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 
 =============================================================================================
 rm /opt/.ver
