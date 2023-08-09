@@ -71,22 +71,19 @@ echo ""; autobackup
 }
 
 #=======================================================
-# Mencari baris dengan kata "backup" dalam /etc/crontab
-backup_lines=$(grep "backup" /etc/crontab)
+# Baca isi dari /etc/crontab
+crontab_content=$(cat /etc/crontab)
 
-# Loop melalui baris yang mengandung kata "backup"
-while read -r line; do
-  # Memeriksa apakah baris mengandung pola "*/10 * * * *"
-  if echo "$line" | grep -q "*/10 * * * *"; then
+# Evaluasi isi crontab dan tentukan nilai status3
+if [[ $crontab_content == *"*/10 * * * * root backup"* ]]; then
      status3="${WH}[${COLOR1}01${WH}]${NC}"
-  elif echo "$line" | grep -q "0 * * * *"; then
+elif [[ $crontab_content == *"0 * * * * root backup"* ]]; then
      status3="${WH}[${COLOR1}02${WH}]${NC}"
-  elif echo "$line" | grep -q "1 0 * * *"; then
+elif [[ $crontab_content == *"1 0 * * * root backup"* ]]; then
      status3="${WH}[${COLOR1}03${WH}]${NC}"
-  elif echo "$line" | grep -q "1 0 * * 0"; then
+elif [[ $crontab_content == *"1 0 * * 0 root backup"* ]]; then
      status3="${WH}[${COLOR1}04${WH}]${NC}"
-  fi
-done <<< "$backup_lines"
+fi
 #=======================================================
 
 
@@ -109,7 +106,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-01 | 1) clear ; fcminute ; status3="${COLOR1}EVERY 10 MINUTES${NC}" ;;
+01 | 1) clear ; fcminute ;;
 02 | 2) clear ; fchour ;;
 03 | 3) clear ; fcday ;;
 04 | 4) clear ; fcweek ;;
