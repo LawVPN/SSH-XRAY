@@ -42,5 +42,4 @@ if __name__ == "__main__":
     asyncio.run(main())
 EOF
 echo ""
-echo "All finished"; sleep 2
-echo "Redirecting.."; sleep 2; menu
+echo "All finished"; sleep 3
