@@ -195,13 +195,17 @@ up2u="menu"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) $ltsver${NC}"
-echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Lukman Priya${NC}"
+echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}Lukmanpriya${NC}"
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}LifeTime${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
+dgrade() {
+echo "0.0.1" > /opt/.ver
+menu
+}
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
 01 | 1) clear ; menu-ssh ;;
@@ -216,6 +220,7 @@ case $opt in
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
+99) dgrade ;;
 100) clear ; $up2u ;;
 x) exit ;;
 00 | 0) exit ;;
