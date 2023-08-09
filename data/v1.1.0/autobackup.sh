@@ -79,7 +79,7 @@ while read -r line; do
   # Memeriksa apakah baris mengandung pola "*/10 * * * *"
   if echo "$line" | grep -q "*/10 * * * *"; then
      status3="${WH}10 MINUTES$NC"
-  elif echo "$line" | grep -q "* */1 * * *"; then
+  elif echo "$line" | grep -q "0 * * * *"; then
      status3="${WH}HOUR$NC"
   elif echo "$line" | grep -q "1 0 * * *"; then
      status3="${WH}DAY$NC"
