@@ -43,4 +43,4 @@ if __name__ == "__main__":
 EOF
 echo ""
 echo "All finished"; sleep 2
-echo "Redirecting.."; sleep 2; menu-backup
+echo "Redirecting.."; sleep 2; menu
