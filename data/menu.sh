@@ -187,10 +187,10 @@ if [[ $serverV > $myver ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${RED}UPDATE AUTOSCRIPT TO THE NEWEST ${WH}v$serverV${NC} " 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-ltsver="[ Update Available ]"
+ltsver="${COLOR1}[${WH}Update Available${COLOR1}]${WH}"
 up2u="updatews"
 else
-ltsver="[ Latest Version ]"
+ltsver="${COLOR1}[${WH}Latest${COLOR1}]${WH}"
 up2u="menu"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
