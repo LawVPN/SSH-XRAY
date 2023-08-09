@@ -67,7 +67,7 @@ case $opt in
 03 | 3) clear ; restore ;;
 04 | 4) clear ; backup_setting ;;
 05 | 5) clear ; infos ;;
-06 | 6) clear ; bash /etc/lukman/dependencies.sh ;;
+06 | 6) clear ; bash /etc/lukman/dependencies.sh ; menu-backup ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 esac
