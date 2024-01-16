@@ -55,8 +55,8 @@ echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/yudhynetwork-pro/ipvps.conf
-
+#echo "IP=$pp" > /var/lib/yudhynetwork-pro/ipvps.conf
+echo ""
 
 secs_to_human() {
     echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
