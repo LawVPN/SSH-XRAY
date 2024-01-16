@@ -38,13 +38,13 @@ fi
 mkdir -p /etc/xray
 
 clear
-echo -e "[ ${tyblue}NOTES${NC} ] AUTO INSTALL SCRIPT.... "
+echo -e "[ ${tyblue}NOTE${NC} ] AUTO INSTALL SCRIPT.... "
 sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] Multi path, Multi port, support debian 10 , Ubuntu 20-18"
+echo -e "[ ${tyblue}NOTE${NC} ] Multi path, Multi port, support debian 10 , Ubuntu 20-18"
 sleep 2
-echo -e "[ ${green}INFO${NC} ]  By LawNET"
+echo -e "[ ${green}INFO${NC} ] By LawNET"
 sleep 1
-echo -e "[ ${green}INFO${NC} ]  t.me/law_sky"
+echo -e "[ ${green}INFO${NC} ] t.me/law_sky"
 sleep 5
 
 echo ""
