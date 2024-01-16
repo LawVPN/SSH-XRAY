@@ -42,10 +42,21 @@ echo -e "[ ${tyblue}NOTES${NC} ] AUTO INSTALL SCRIPT.... "
 sleep 1
 echo -e "[ ${tyblue}NOTES${NC} ] Multi path, Multi port, support debian 10 , Ubuntu 20-18"
 sleep 2
-echo -e "[ ${green}INFO${NC} ] By LawNET"
+echo -e "[ ${green}INFO${NC} ]  By LawNET"
 sleep 1
-echo -e "[ ${green}INFO${NC} ] t.me/law_sky"
+echo -e "[ ${green}INFO${NC} ]  t.me/law_sky"
 sleep 5
+
+echo ""
+yellow "Add Your Domain"
+echo " "
+read -rp "Input your domain : " -e pp
+echo "$pp" > /root/domain
+echo "$pp" > /root/scdomain
+echo "$pp" > /etc/xray/domain
+echo "$pp" > /etc/xray/scdomain
+echo "IP=$pp" > /var/lib/yudhynetwork-pro/ipvps.conf
+
 
 secs_to_human() {
     echo "Installation time : $(( ${1} / 3600 )) hours $(( (${1} / 60) % 60 )) minute's $(( ${1} % 60 )) seconds"
@@ -82,7 +93,7 @@ mkdir -p /etc/yudhynetwork/theme
 mkdir -p /var/lib/yudhynetwork-pro >/dev/null 2>&1
 echo "IP=" >> /var/lib/yudhynetwork-pro/ipvps.conf
 
-if [ -f "/etc/xray/domain" ]; then
+if [ -f "/etc/xray/config.json" ]; then
 echo ""
 echo -e "[ ${green}INFO${NC} ] Script Already Installed"
 echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
@@ -100,15 +111,6 @@ echo ""
 wget -q https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
-
-yellow "Add Your Domain"
-echo " "
-read -rp "Input your domain : " -e pp
-echo "$pp" > /root/domain
-echo "$pp" > /root/scdomain
-echo "$pp" > /etc/xray/domain
-echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/yudhynetwork-pro/ipvps.conf
 
 ############# LawNET #############
 #THEME RED
