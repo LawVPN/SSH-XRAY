@@ -10,8 +10,11 @@ export COLOR1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "TEXT" | cut -d
 export COLBG1="$(cat /etc/yudhynetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
 WH='\033[1;37m'                   
 ###########- Yudhy network-##########
-tram=$( free -h | awk 'NR==2 {print $2}' )
-uram=$( free -h | awk 'NR==2 {print $3}' )
+# RAM USAGE
+tram=$(free -m | awk 'NR==2 {print $2}')
+uram=$(free -m | awk 'NR==2 {print $3}')
+freeram=$(($tram - $uram))
+
 ISP=$(cat /etc/xray/isp | cut -d " " -f 2-10 )
 CITY=$(cat /etc/xray/city)
 export RED='\033[0;31m'
@@ -113,7 +116,7 @@ echo -e "$COLOR1 $NC ${WH}System Uptime  ${COLOR1}: ${WH}$uphours $upminutes $up
 else
 echo -e "$COLOR1 $NC ${WH}System Uptime  ${COLOR1}: ${WH}$uphours $upminutes"
 fi
-echo -e "$COLOR1 $NC ${WH}Memory Usage   ${COLOR1}: ${WH}$uram / $tram"
+echo -e "$COLOR1 $NC ${WH}Memory Usage   ${COLOR1}: ${COLOR1}${uram}${NC}MB / ${COLOR1}${tram}${NC}MB (${COLOR1}${freeram}${NC}MB free)"
 echo -e "$COLOR1 $NC ${WH}ISP & City     ${COLOR1}: ${WH}$ISP & $CITY"
 echo -e "$COLOR1 $NC ${WH}Current Domain ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS         ${COLOR1}: ${WH}$sensored_ip${NC}"
