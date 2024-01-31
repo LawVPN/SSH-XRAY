@@ -67,6 +67,10 @@ wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRA
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu.sh" && chmod +x /usr/bin/menu
 
+# 1.1.1
+cd; clear
+wget -q -O city.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/city.sh; bash city.sh; rm city.sh
+
 =============================================================================================
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
@@ -80,7 +84,8 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates [done]"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File  [done]"
-echo -e "
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.1 :
+     ➢ Enhanced visual on menu (reduced lag)
    $COLOR1[INFO] ${NC}Changelogs on v1.1.0 :
      ➢ Fixed backup menu
      ➢ Enhancement login page
