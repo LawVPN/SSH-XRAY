@@ -12,54 +12,10 @@ WH='\033[1;37m'
 ###########- Yudhy network-##########
 tram=$( free -h | awk 'NR==2 {print $2}' )
 uram=$( free -h | awk 'NR==2 {print $3}' )
-#ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-#CITY=$(curl -s ipinfo.io/city )
+ISP=$(cat /etc/xray/isp | cut -d " " -f 2-10 )
+CITY=$(cat /etc/xray/city)
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
-
-# usage
-vnstat_profile=$(vnstat | sed -n '3p' | awk '{print $1}' | grep -o '[^:]*')
-vnstat -i ${vnstat_profile} >/root/t1
-bulan=$(date +%b)
-today=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
-todayd=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $8}')
-today_v=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $9}')
-today_rx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $2}')
-today_rxv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $3}')
-today_tx=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $5}')
-today_txv=$(vnstat -i ${vnstat_profile} | grep today | awk '{print $6}')
-if [ "$(grep -wc ${bulan} /root/t1)" != '0' ]; then
-    bulan=$(date +%b)
-    month=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $9}')
-    month_v=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $10}')
-    month_rx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $3}')
-    month_rxv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $4}')
-    month_tx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $6}')
-    month_txv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $7}')
-else
-    bulan=$(date +%Y-%m)
-    month=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $8}')
-    month_v=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $9}')
-    month_rx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $2}')
-    month_rxv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $3}')
-    month_tx=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $5}')
-    month_txv=$(vnstat -i ${vnstat_profile} | grep "$bulan " | awk '{print $6}')
-fi
-if [ "$(grep -wc yesterday /root/t1)" != '0' ]; then
-    yesterday=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $8}')
-    yesterday_v=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $9}')
-    yesterday_rx=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $2}')
-    yesterday_rxv=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $3}')
-    yesterday_tx=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $5}')
-    yesterday_txv=$(vnstat -i ${vnstat_profile} | grep yesterday | awk '{print $6}')
-else
-    yesterday=NULL
-    yesterday_v=NULL
-    yesterday_rx=NULL
-    yesterday_rxv=NULL
-    yesterday_tx=NULL
-    yesterday_txv=NULL
-fi
 
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
@@ -133,7 +89,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
-read -n 1 -s -r -p "  Press any key to back on menu"
+read -n 1 -s -r -p "  Press any key to go back!"
 menu
 }
 clear
@@ -145,9 +101,10 @@ uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
-IPVPS=$(curl -s ipinfo.io/ip )
+IPVPS=$(cat /etc/xray/ip)
 sensored_ip=$(echo $IPVPS | sed 's/\.[0-9]*\.[0-9]*$/.*.*/')
-serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version)
+
+serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version); ##### USING EXTERNAL LINK #####
 
 uis="${COLOR1}Premium Version$NC"
 echo -e "$COLOR1 $NC ${WH}User Roles     ${COLOR1}: ${WH}$uis"
@@ -164,12 +121,6 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status_xray} ${WH}]   ${WH}[ NGINX : ${status_nginx} ${WH}] $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-#echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-#echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday       Month   ${NC}"
-#echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv      $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
-#echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv      $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
-#echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
-#echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1}${status_ws}${WH}]   ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}THEME    ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"   
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS   ${WH}[${COLOR1}${status_xray}${WH}]   ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}BACKUP   ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"  
