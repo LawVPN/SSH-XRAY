@@ -1,6 +1,6 @@
 #!/bin/bash
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+#biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 colornow=$(cat /etc/yudhynetwork/theme/color.conf)
 export NC="\e[0m"
@@ -12,8 +12,8 @@ WH='\033[1;37m'
 ###########- Yudhy network-##########
 tram=$( free -h | awk 'NR==2 {print $2}' )
 uram=$( free -h | awk 'NR==2 {print $3}' )
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
+#ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+#CITY=$(curl -s ipinfo.io/city )
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
 
