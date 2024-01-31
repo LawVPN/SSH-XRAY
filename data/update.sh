@@ -69,7 +69,7 @@ wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main
 
 # 1.1.1
 cd; clear
-wget -q -O city.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/city.sh; bash city.sh; rm city.sh
+wget -q -O city.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.1/city.sh; bash city.sh; rm city.sh
 
 =============================================================================================
 rm /opt/.ver
