@@ -1,6 +1,6 @@
 #!/bin/bash
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+#biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 colornow=$(cat /etc/yudhynetwork/theme/color.conf)
 NC="\e[0m"
@@ -35,10 +35,10 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}                 ${WH}• LawNetwork •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
-read -n 1 -s -r -p "  Press any key to back on menu"
+read -n 1 -s -r -p "  Press any key to go back!"
 menu-ssh
 else
-echo "$Login" >> /etc/xray/ssh.txt
+#echo "$Login" >> /etc/xray/ssh.txt
 fi
 
 if [ -z $Login ]; then
@@ -87,7 +87,7 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
-
+echo "$Login" >> /etc/xray/ssh.txt
 sleep 1
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
