@@ -39,6 +39,7 @@ read -n 1 -s -r -p "  Press any key to go back!"
 menu-ssh
 else
 #echo "$Login" >> /etc/xray/ssh.txt
+clear
 fi
 
 if [ -z $Login ]; then
