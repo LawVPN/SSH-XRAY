@@ -29,7 +29,7 @@ wget -q -O /usr/bin/update "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/ma
 #echo -e " [INFO] Update Successfully"
 wget -q -O /opt/.ver "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version"
 wget -q -O /usr/bin/autoboot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/autoboot.sh" && chmod +x /usr/bin/autoboot
-wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
+#wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
 echo ""
 #sleep 2;
 
@@ -77,6 +77,7 @@ wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XR
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
 wget -q -O /usr/local/bin/add-ssh-user "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/add-ssh-user" && chmod +x /usr/local/bin/add-ssh-user
 wget -q -O /usr/local/bin/del-ssh-user "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/del-ssh-user" && chmod +x /usr/local/bin/del-ssh-user
+wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/hidessh" && chmod +x /usr/bin/hidessh
 
 cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
