@@ -15,7 +15,7 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 freeram=$(($tram - $uram))
 
-ISP=$(cat /etc/xray/isp | cut -d " " -f 2-10 )
+ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
