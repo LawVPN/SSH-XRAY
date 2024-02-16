@@ -12,7 +12,7 @@ wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/LawVPN/SSH-XRA
 #wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 wget -q -O /usr/bin/menu-bot "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-bot.sh" && chmod +x /usr/bin/menu-bot
 #wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
-wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
+#wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
 wget -q -O /usr/bin/menu-theme "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-theme.sh" && chmod +x /usr/bin/menu-theme
 #wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
 wget -q -O /usr/bin/menu-ip "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ip.sh" && chmod +x /usr/bin/menu-ip
@@ -64,7 +64,7 @@ wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/
 wget -q -O /usr/bin/backup_setting raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/bset.sh; chmod 755 /usr/bin/backup_setting
 
 #wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
+#wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 #wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu.sh" && chmod +x /usr/bin/menu
 
 # 1.1.1
@@ -75,7 +75,8 @@ wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
 wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
-
+wget -q -O /usr/local/bin/add-ssh-user "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/add-ssh-user" && chmod +x /usr/local/bin/add-ssh-user
+wget -q -O /usr/local/bin/del-ssh-user "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/del-ssh-user" && chmod +x /usr/local/bin/del-ssh-user
 
 cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
