@@ -262,7 +262,7 @@ case $opt in
 07 | 7) clear ; autoboot ;;
 08 | 8) clear ; mspeed ;;
 09 | 9) clear ; hidessh ;;
-10) clear ; regionchecker ;;
+10) clear ; regionchecker ; read -n 1 -s -r -p "  Press any key to go back" ; menu-set ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac
