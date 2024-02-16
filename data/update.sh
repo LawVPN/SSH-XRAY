@@ -73,6 +73,16 @@ wget -q -O city.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.1/ci
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu.sh" && chmod +x /usr/bin/menu
 wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-ssh.sh" && chmod +x /usr/bin/menu-ssh
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-trojan.sh" && chmod +x /usr/bin/menu-trojan
+wget -q -O /usr/bin/menu-set "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-set.sh" && chmod +x /usr/bin/menu-set
+
+
+cat <<EOF > /usr/bin/regionchecker
+#!/bin/bash
+echo "0" | bash <(curl -L -s https://s.id/netflixchecker) -E -M 4
+read -n 1 -s -r -p "  Press any key to go back"
+EOF
+chmod +x /usr/bin/regionchecker
 
 =============================================================================================
 rm /opt/.ver
