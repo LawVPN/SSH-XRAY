@@ -81,6 +81,7 @@ cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
 echo "0" | bash <(curl -L -s https://s.id/netflixchecker) -E -M 4
 read -n 1 -s -r -p "  Press any key to go back"
+menu-set
 EOF
 chmod +x /usr/bin/regionchecker
 
@@ -98,7 +99,9 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates [done]"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File  [done]"
 echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.1 :
-     ➢ Enhanced visual on menu (reduced lag)
+     ➢ Fixed visual bug on menu (reduced lag)
+     ➢ Updated HideSSH plugin to the latest
+     ➢ Minor update
    $COLOR1[INFO] ${NC}Changelogs on v1.1.0 :
      ➢ Fixed backup menu
      ➢ Enhancement login page
