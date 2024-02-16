@@ -254,7 +254,7 @@ echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
 01 | 1) clear ; status ;;
-02 | 2) clear ; nano /etc/issue.net ;;
+02 | 2) clear ; nano /etc/issue.net ; menu-set ;;
 03 | 3) clear ; mbandwith ;;
 04 | 4) clear ; enabletorrent ;;
 05 | 5) clear ; menu-tcp ;;
