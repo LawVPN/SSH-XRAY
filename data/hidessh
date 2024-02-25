@@ -89,10 +89,10 @@ rm -f /usr/local/bin/del-trojan-user
 sleep .5
 echo -e " $COLOR1 ${NC}  ${WH}[${COLOR1}INFO${WH}] ${COLOR1}• ${WH}Downloading the plugins...           $COLOR1 ${NC}"
 cd /usr/local/bin
-wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/newhide/add-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/add-ssh-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-vmess-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/add-trojan-user
-wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/newhide/del-ssh-user
+wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/del-ssh-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-vmess-user
 wget -q raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/user/del-trojan-user
 sleep .5
