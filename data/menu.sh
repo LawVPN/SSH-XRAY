@@ -15,8 +15,8 @@ tram=$(free -m | awk 'NR==2 {print $2}')
 uram=$(free -m | awk 'NR==2 {print $3}')
 freeram=$(($tram - $uram))
 
-ISP=$(cat /etc/xray/isp)
-CITY=$(cat /etc/xray/city)
+ISP=$(cat /etc/lukman/isp)
+CITY=$(cat /etc/lukman/city)
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
 
@@ -104,7 +104,7 @@ uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
-IPVPS=$(cat /etc/xray/ip)
+IPVPS=$(cat /etc/lukman/ip)
 sensored_ip=$(echo $IPVPS | sed 's/\.[0-9]*\.[0-9]*$/.*.*/')
 
 serverV=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/version); ##### USING EXTERNAL LINK #####
