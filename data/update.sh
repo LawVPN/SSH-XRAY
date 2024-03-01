@@ -81,7 +81,7 @@ wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawNetwork/Autosc
 
 cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
-echo "0" | bash <(curl -L -s https://s.id/netflixchecker) -E -M 4
+echo "0" | bash <(curl -L -a https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) -E -M 4
 read -n 1 -s -r -p "  Press any key to go back"
 menu-set
 EOF
