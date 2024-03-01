@@ -58,9 +58,9 @@ wget -q -O /root/profile/art raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data
 cd; clear; mkdir -p /etc/lukman
 wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-backup.sh" && chmod +x /usr/bin/menu-backup
 wget -q -O /etc/lukman/dependencies.sh raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/dependencies.sh; bash /etc/lukman/dependencies.sh
-wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
+#wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
 wget -q -O /usr/bin/autobackup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/autobackup.sh; chmod 755 /usr/bin/autobackup
-wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
+#wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
 wget -q -O /usr/bin/backup_setting raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/bset.sh; chmod 755 /usr/bin/backup_setting
 
 #wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
@@ -86,6 +86,11 @@ read -n 1 -s -r -p "  Press any key to go back"
 menu-set
 EOF
 chmod +x /usr/bin/regionchecker
+
+# 1.1.2
+cd; clear
+wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
+wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
 
 =============================================================================================
 rm /opt/.ver
