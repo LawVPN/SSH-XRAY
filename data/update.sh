@@ -79,6 +79,13 @@ wget -q -O /usr/local/bin/add-ssh-user "https://raw.githubusercontent.com/LawNet
 wget -q -O /usr/local/bin/del-ssh-user "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/newhide/del-ssh-user" && chmod +x /usr/local/bin/del-ssh-user
 wget -q -O /usr/bin/hidessh "https://raw.githubusercontent.com/LawNetwork/Autoscript/main/hidessh/hidessh" && chmod +x /usr/bin/hidessh
 
+# 1.1.2
+cd; clear
+wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
+wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
+
+# 1.1.3
+clear; clear
 cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
 echo "0" | bash <(curl -L -a https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) -E -M 4
@@ -87,10 +94,6 @@ menu-set
 EOF
 chmod +x /usr/bin/regionchecker
 
-# 1.1.2
-cd; clear
-wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/backup.sh; chmod 755 /usr/bin/backup
-wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
 
 =============================================================================================
 rm /opt/.ver
@@ -105,7 +108,9 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates [done]"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File  [done]"
-echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.1 :
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.3 :
+     ➢ Fixed region checker error
+   $COLOR1[INFO] ${NC}Changelogs on v1.1.1 :
      ➢ Fixed visual bug on menu (reduced lag)
      ➢ Updated HideSSH plugin to the latest
      ➢ Minor update
