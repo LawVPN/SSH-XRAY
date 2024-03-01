@@ -28,4 +28,5 @@ echo "Sending to current telegram chat id"; sleep 2
 python3 /etc/lukman/send.py
 echo "Sending to current telegram chat id (done)"
 
-read -p "Press enter to go back" -n 1; menu-backup
+#read -p "Press enter to go back" -n 1; menu-backup
+exit 0
