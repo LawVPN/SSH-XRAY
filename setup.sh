@@ -304,6 +304,7 @@ rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh 
 rm /root/update.sh
+rm /root/lawsc >/dev/null 2>&1
 
 echo ""
 echo -e "Setting up autorefresh on xray user login"
