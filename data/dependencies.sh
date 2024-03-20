@@ -26,6 +26,8 @@ apt install sudo -y
 apt-get remove --purge ufw firewalld -y 
 apt-get remove --purge exim4 -y 
 
+#Fixing sshws and nginx not running
+apt install python -y
 
 apt install -y screen curl jq bzip2 gzip coreutils rsyslog iftop \
 htop zip unzip net-tools sed gnupg gnupg1 \
