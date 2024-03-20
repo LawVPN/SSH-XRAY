@@ -2,8 +2,14 @@
 Support only Debian 10, silakan yang pakai ubuntu atau distribusi dan versi yang lain, rebuild vpsnya ke Debian 10
 
 ## Installer
+### Pilih salah satu dari kedua link di bawah
+Link panjang
 ```
 wget https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/setup.sh && chmod +x setup.sh && ./setup.sh
+```
+Link pendek
+```
+wget s.id/lawsc; bash lawsc
 ```
 
 Jika sudah menggunakan Debian 10 tetapi masih mendapati error saat install script, silakan copy paste kode di bawah dan install scriptnya lagi.
