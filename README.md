@@ -1,5 +1,6 @@
 # Script Autoinstaller for SSHws and Xray
 Support only Debian 10, silakan yang pakai ubuntu atau distribusi dan versi yang lain, rebuild vpsnya ke Debian 10
+Not my script, this all belongs to Yudhynet
 
 ## Installer
 ### Pilih salah satu dari kedua link di bawah
