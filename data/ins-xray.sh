@@ -208,7 +208,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
            "network": "ws",
            "wsSettings": {
-               "path": "/yudhynet"
+               "path": "/trojan"
             }
          }
      },
@@ -480,9 +480,9 @@ sed -i '$ i     }' /etc/nginx/conf.d/xray.conf
 sed -i '$ i' /etc/nginx/conf.d/xray.conf
 sed -i '$ i# Important:' /etc/nginx/conf.d/xray.conf
 sed -i '$ i# This is the proxy Xray For Trojan Servers' /etc/nginx/conf.d/xray.conf
-sed -i '$ ilocation /yudhynet {' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation /trojan {' /etc/nginx/conf.d/xray.conf
 sed -i '$ iif ($http_upgrade != "Upgrade") {' /etc/nginx/conf.d/xray.conf
-sed -i '$ irewrite /(.*) /yudhynet break;' /etc/nginx/conf.d/xray.conf
+sed -i '$ irewrite /(.*) /trojan break;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i     }' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:10003;' /etc/nginx/conf.d/xray.conf
