@@ -1,0 +1,153 @@
+#!/bin/bash
+
+clear
+cek=$(service ssh status | grep active | cut -d ' ' -f5)
+if [ "$cek" = "active" ]; then
+stat=-f5
+else
+stat=-f7
+fi
+cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
+if [ "$cekray" = "XRAY" ]; then
+rekk='xray'
+becek='XRAY'
+else
+rekk='v2ray'
+becek='V2RAY'
+fi
+
+ssh=$(service ssh status | grep active | cut -d ' ' $stat)
+if [ "$ssh" = "active" ]; then
+ressh="ONLINE"
+else
+ressh="OFFLINE"
+fi
+sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
+if [ "$sshstunel" = "active" ]; then
+resst="ONLINE"
+else
+resst="OFFLINE"
+fi
+sshws=$(service ws-dropbear status | grep active | cut -d ' ' $stat)
+if [ "$sshws" = "active" ]; then
+rews="ONLINE"
+else
+rews="OFFLINE"
+fi
+
+sshws2=$(service ws-stunnel status | grep active | cut -d ' ' $stat)
+if [ "$sshws2" = "active" ]; then
+rews2="ONLINE"
+else
+rews2="OFFLINE"
+fi
+
+db=$(service dropbear status | grep active | cut -d ' ' $stat)
+if [ "$db" = "active" ]; then
+resdb="ONLINE"
+else
+resdb="OFFLINE"
+fi
+ 
+v2r=$(service $rekk status | grep active | cut -d ' ' $stat)
+if [ "$v2r" = "active" ]; then
+resv2r="ONLINE"
+else
+resv2r="OFFLINE"
+fi
+vles=$(service $rekk status | grep active | cut -d ' ' $stat)
+if [ "$vles" = "active" ]; then
+resvles="ONLINE"
+else
+resvles="OFFLINE"
+fi
+trj=$(service $rekk status | grep active | cut -d ' ' $stat)
+if [ "$trj" = "active" ]; then
+restr="ONLINE"
+else
+restr="OFFLINE"
+fi
+
+tcp="$(systemctl show --now openvpn-server@server-tcp-1194 --no-page)"
+status1=$(echo "${tcp}" | grep 'ActiveState=' | cut -f2 -d=)
+if [ "${status1}" = "active" ]; then
+ovpntcp="ONLINE"
+else
+ovpntcp="OFFLINE"
+fi
+
+udp="$(systemctl show --now openvpn-server@server-udp-2200 --no-page)"
+status2=$(echo "${udp}" | grep 'ActiveState=' | cut -f2 -d=)
+if [ "${status2}" = "active" ]; then
+ovpnudp="ONLINE"
+else
+ovpnudp="OFFLINE"
+fi
+
+ovhp="$(systemctl show ohp.service --no-page)"
+status3=$(echo "${ovhp}" | grep 'ActiveState=' | cut -f2 -d=)
+if [ "${status3}" = "active" ]; then
+ohp="ONLINE"
+else
+ohp="OFFLINE"
+fi
+
+ningx=$(service nginx status | grep active | cut -d ' ' $stat)
+if [ "$ningx" = "active" ]; then
+resnx="ONLINE"
+else
+resnx="OFFLINE"
+fi
+
+squid=$(service squid status | grep active | cut -d ' ' $stat)
+if [ "$squid" = "active" ]; then
+ressq="ONLINE"
+else
+ressq="OFFLINE"
+fi
+
+
+
+
+###################################
+TOKEN=$(cat /etc/lukman/bot_token)
+CHAT_ID=$(cat /etc/lukman/chat_id)
+date=$(date "+%d %b %Y %H:%M:%S")
+
+
+input_file="/etc/xray/domain"
+output=""
+while IFS= read -r line; do
+    sanitized=$(echo "$line" | awk -F'.' '{print toupper(substr($1,1,1)) tolower(substr($1,2))}')
+    output="$output $sanitized"
+done < "$input_file"
+output_upper=$(echo "$output" | tr '[:lower:]' '[:upper:]')
+lastdomain="$output_upper"
+
+MESSAGE="<pre>
+┌────────────────────────────┐
+         • SERVER STATUS •
+└────────────────────────────┘
+ ┌──────────────────────────┐
+   • SSH                • \$ressh
+   • SQUID              • \$ressq
+   • DROPBEAR           • \$resdb
+   • NGINX              • \$resnx
+   • WS DROPBEAR        • \$rews
+   • WS STUNNEL         • \$rews2
+   • STUNNEL            • \$resst
+   • XRAY-SS            • \$resv2r
+   • XRAY               • \$resv2r
+   • VLESS              • \$resvles
+   • TROJAN             • \$restr
+ └──────────────────────────┘
+     Domain :\$lastdomain
+┌────────────────────────────┐
+          • LawNetwork •
+└────────────────────────────┘
+        \$date
+</pre>"
+
+eval "MESSAGE=\"$MESSAGE\""
+curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" -d "chat_id=$CHAT_ID" -d "parse_mode=HTML" -d "text=$MESSAGE" > /dev/null 2>&1
+###################################
