@@ -101,6 +101,9 @@ version_up=$( curl -sS https://raw.githubusercontent.com/LawVPN/SSH-XRAY/main/da
 echo "$version_up" > /opt/.ver
 =============================================================================================
 
+#devonly
+wget -q -O /usr/bin/runcheck raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/runcheck && chmod +x /usr/bin/runcheck
+
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
