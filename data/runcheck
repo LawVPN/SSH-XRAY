@@ -68,22 +68,6 @@ else
 restr="OFFLINE"
 fi
 
-tcp="$(systemctl show --now openvpn-server@server-tcp-1194 --no-page)"
-status1=$(echo "${tcp}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status1}" = "active" ]; then
-ovpntcp="ONLINE"
-else
-ovpntcp="OFFLINE"
-fi
-
-udp="$(systemctl show --now openvpn-server@server-udp-2200 --no-page)"
-status2=$(echo "${udp}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status2}" = "active" ]; then
-ovpnudp="ONLINE"
-else
-ovpnudp="OFFLINE"
-fi
-
 ovhp="$(systemctl show ohp.service --no-page)"
 status3=$(echo "${ovhp}" | grep 'ActiveState=' | cut -f2 -d=)
 if [ "${status3}" = "active" ]; then
