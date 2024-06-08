@@ -33,7 +33,7 @@ sleep 2
 echo -e "[ ${green}INFO${NC} ] Processing to stop $Cek " 
 sleep 1
 fi
-echo -ne "[ ${green}INFO${NC} ] Cert for domain ipv4/ipv6?[4/6]: "; read ip_version
+echo -ne "[ ${green}INFO${NC} ] Cert for domain ipv4/ipv6? [4/6]: "; read ip_version
 #read -p "[ ${green}INFO${NC} ] Cert for domain ipv4/ipv6? [4/6]: " ip_version
 echo -e "[ ${green}INFO${NC} ] Starting renew cert... " 
 sleep 2
