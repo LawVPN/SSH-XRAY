@@ -33,7 +33,7 @@ sleep 2
 echo -e "[ ${green}INFO${NC} ] Processing to stop $Cek " 
 sleep 1
 fi
-echo -e "[ ${green}INFO${NC} ] Cert for domain ipv4/ipv6?[4/6]: "; read ip_version
+echo -ne "[ ${green}INFO${NC} ] Cert for domain ipv4/ipv6?[4/6]: "; read ip_version
 echo -e "[ ${green}INFO${NC} ] Starting renew cert... " 
 sleep 2
 #/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
