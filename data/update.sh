@@ -104,6 +104,9 @@ menu-set
 EOF
 chmod +x /usr/bin/regionchecker
 
+wget -q -O /usr/bin/crtxray raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/crt.sh; chmod +x /usr/bin/crtxray
+
+
 
 =============================================================================================
 rm /opt/.ver
