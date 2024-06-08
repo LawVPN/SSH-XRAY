@@ -85,10 +85,20 @@ wget -q -O /usr/bin/backup raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v
 wget -q -O /usr/bin/restore raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/v1.1.0/restore.sh; chmod 755 /usr/bin/restore
 
 # 1.1.3
-clear; clear
+#clear; clear
+#cat <<EOF > /usr/bin/regionchecker
+##!/bin/bash
+#echo "0" | bash <(curl -L -a https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) -E -M 4
+#read -n 1 -s -r -p "  Press any key to go back"
+#menu-set
+#EOF
+#chmod +x /usr/bin/regionchecker
+
+# 1.1.4
+clear
 cat <<EOF > /usr/bin/regionchecker
 #!/bin/bash
-echo "0" | bash <(curl -L -a https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) -E -M 4
+echo "0" | bash <(curl -L -a https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) -E en -M 4
 read -n 1 -s -r -p "  Press any key to go back"
 menu-set
 EOF
@@ -111,7 +121,10 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates [done]"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Downloading Update File  [done]"
-echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.3 :
+echo -e "   $COLOR1[INFO] ${NC}Changelogs on v1.1.4 :
+     ➢ Fixed region checker error
+     ➢ Added option on ssl cert installer (ipv4/6)
+$COLOR1[INFO] ${NC}Changelogs on v1.1.3 :
      ➢ Fixed region checker error
    $COLOR1[INFO] ${NC}Changelogs on v1.1.1 :
      ➢ Fixed visual bug on menu (reduced lag)
