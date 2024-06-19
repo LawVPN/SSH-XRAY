@@ -1,7 +1,6 @@
 #!/bin/bash
 
-wget -q -O /usr/bin/bwMonitor raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/bwMonitor 
-chmod +x bwMonitor
+wget -q -O /usr/bin/bwMonitor raw.githubusercontent.com/LawVPN/SSH-XRAY/main/data/bwMonitor  && chmod +x /usr/bin/bwMonitor
 
 cat <<EOF > "/etc/cron.d/bwMonitor"
 SHELL=/bin/sh
